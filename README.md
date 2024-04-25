@@ -2,9 +2,35 @@
 
 Welcome to the Keylogger Walkthrough repository! This guide is designed to provide cybersecurity enthusiasts with the knowledge to create, analyze, and understand keyloggers. It is intended for educational purposes only.
 
-## What is a Keylogger?
+Before diving into keylogger creation, it’s crucial to set up a proper environment. The guide suggests using a virtual environment (venv) to avoid dependency issues. It walks through the process of creating a folder for the keylogger, activating the virtual environment, and installing the keyboard module with pip install keyboard.
 
-A keylogger is a type of monitoring software designed to record keystrokes made by a user. The recorded data can then be sent to an external source, such as an email or server, or stored locally on the system.
+
+## What is keyboard module in python? 
+
+Python offers a plethora of modules that extend its capabilities, and one such module is the keyboard module. This module is instrumental in creating keyloggers, tools designed to record keystrokes on a computer’s keyboard. While keyloggers can serve legitimate purposes like monitoring employee productivity or parental control, they also pose significant security risks if misused by malicious entities.
+It's essential to note that while keyloggers have legitimate uses like monitoring employee productivity or parental control, they can be misused by hackers to capture sensitive information.
+
+First, create a folder on your local system,
+
+<pre>
+mkdir keylogger
+</pre>
+
+Next, we would cd into the keylogger directory and create a virtual environment python -m venv myenv. Then, activate the Virtual environment source myenv/bin/activate, and then we can install dependencies.
+
+<pre>
+cd keylogger
+python -m venv myenv
+</pre>
+
+## Prerequisites
+Before we begin, you'll need to install the **keyboard** module. Open your terminal or command prompt and enter:
+
+<pre>
+$ pip install keyboard
+</pre>
+
+This module allows us to take control of the keyboard, hook global events, register hotkeys, simulate key presses, and more.
 
 ## Disclaimer
 
@@ -14,12 +40,11 @@ This guide should not be used for illegal purposes. The aim is to raise awarenes
 
 This guide will walk you through setting up a basic keylogger using Python. You'll learn how to capture keystrokes and how to handle the data collected.
 
-
 - Continuous keystroke monitoring
 - Customizable report methods (email or local storage)
 - Easy-to-follow Python scripts
 
-## Setting Up the Keylogger
+# Setting Up the Keylogger
 
 Let's initialize the required parameters:
 <pre>
